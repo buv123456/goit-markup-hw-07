@@ -32,7 +32,7 @@ body {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -89,10 +89,23 @@ ul {
 }
 
 .container {
-  width: 1158px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* ----------------HEADER------------------ */
@@ -116,11 +129,11 @@ ul {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
   font-size: 18px;
-  line-height: 1.33;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--color-logo);
-  display: inline-block;
+  display: block;
   position: relative;
   transition: transform var(--animation-time) var(--trans-function);
 }
@@ -269,59 +282,39 @@ ul {
 
 /* ----------------OUR ADVANTAGES------------------ */
 .advantage {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
 
 .advantage-icon {
-  display: flex;
-  width: 264px;
-  height: 112px;
-  margin-bottom: 8px;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--bg-team);
-  border-radius: 4px;
-}
+  display: none;
 
-.advantage-item-icon {
-  width: 64px;
-  height: 64px;
-}
-
-.advantage-list {
-  display: flex;
-  gap: var(--gap-photo);
 }
 
 .advantage-item {
-  width: 264px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.advantage-item:not(:last-child) {
+  margin-bottom: 72px;
 }
 
 .advantage-item-title {
   margin-bottom: 8px;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
+  text-align: center;
+  text-transform: capitalize;
   color: var(--color-title);
 }
 
 .advantage-text {
-  font-size: 16px;
+  font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--color-text);
@@ -329,26 +322,14 @@ ul {
 
 /* ----------------WE DOING------------------ */
 .doing {
-  padding-bottom: 120px;
-}
-
-.doing-title {
-  margin-bottom: 72px;
-}
-
-.doing-list {
-  display: flex;
-  gap: var(--gap-photo);
-}
-
-.doing-item {
-  border: 1px solid var(--color-border);
+  display: none;
 }
 
 /* ----------------OUR TEAM------------------ */
+
 .team {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
   background-color: var(--bg-team);
 }
 
@@ -358,11 +339,12 @@ ul {
 
 .team-list {
   display: flex;
-  gap: var(--gap-photo);
+  flex-wrap: wrap;
+  gap: 72px;
 }
 
 .team-item {
-  width: calc((100% - 3 * 24px) / 4);
+  width: 100%;
   background-color: var(--color-title-contrast);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
@@ -424,9 +406,10 @@ ul {
 
 .costumers-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: var(--gap-photo);
+  gap: 72px 16px;
 }
 
 .costumer-link {
@@ -464,6 +447,13 @@ ul {
 
 .footer-items {
   display: flex;
+  flex-wrap: wrap;
+  gap: 72px;
+  justify-content: center;
+}
+
+.footer-logo {
+  text-align: center;
 }
 
 .footer .logo-part {
@@ -478,20 +468,18 @@ ul {
   margin-top: 16px;
 }
 
-.footer-left-column {
-  display: block;
-  margin-right: 120px;
-}
+
 
 .social-title,
 .footer-label-subscribe {
   margin-bottom: 16px;
   font-weight: 500;
-  font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  text-align: center;
   color: var(--color-title-contrast);
 }
+
 
 .footer-list {
   display: flex;
@@ -521,35 +509,31 @@ ul {
   height: 24px;
 }
 
-.footer-subscribe {
-  display: block;
-  margin-left: auto;
-}
-
 .footer-subscribe-wrap {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
 }
 
 .footer-label-subscribe {
-  display: inline-block;
-  margin-bottom: 16px;
+  display: block;
 }
 
 .footer-subscribe-input {
   display: block;
-  width: 264px;
+  width: 100%;
   height: 40px;
   padding-left: 16px;
-  margin-right: 24px;
   color: #ffffff;
   border: 1px solid #FFFFFF;
   border-radius: 4px;
   background-color: transparent;
   outline: transparent;
+  opacity: 0.3;
 }
 
 .footer-subscribe-input::placeholder {
-  font-weight: 400;
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
@@ -559,7 +543,6 @@ ul {
 .footer-subscribe-btn {
   font-weight: 500;
   line-height: 1.5;
-  font-size: 16px;
   letter-spacing: 0.04em;
   width: 165px;
   height: 40px;

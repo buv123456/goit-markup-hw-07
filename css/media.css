@@ -1,0 +1,208 @@
+@media screen and (min-width:428px) {
+    .container {
+        width: 426px;
+    }
+
+}
+
+@media screen and (min-width:768px) and (max-width:1157px) {
+    .container {
+        width: 766px;
+    }
+
+    .team>.container,
+    .costumers>.container {
+        padding-left: 107px;
+        padding-right: 107px;
+    }
+
+    .advantage-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 72px 24px;
+    }
+
+    .advantage-item {
+        width: calc((100% - 24px) / 2);
+    }
+
+    .advantage-item-title {
+        text-align: start;
+    }
+
+    .advantage-item:not(:last-child) {
+        margin-bottom: 0;
+    }
+
+    .team-list {
+        gap: 64px 24px;
+    }
+
+    .team-item {
+        width: 264px;
+    }
+
+    .costumers-list {
+        gap: 62px 24px;
+    }
+
+    .footer>.container {
+        padding-right: 163px;
+        padding-left: 107px;
+    }
+
+    .footer-logo {
+        text-align: start;
+    }
+
+    .footer-items {
+        gap: 72px 24px;
+        justify-content: unset;
+    }
+
+    .footer-label-subscribe {
+        text-align: start;
+    }
+
+    .footer-subscribe-wrap {
+        flex-wrap: nowrap;
+        gap: 24px;
+    }
+
+    .footer-subscribe-input {
+        width: 264px;
+
+    }
+}
+
+@media screen and (min-width:1158px) {
+
+    .container {
+        width: 1158px;
+    }
+
+    .advantage {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    .advantage-icon {
+        display: flex;
+        width: 264px;
+        height: 112px;
+        margin-bottom: 8px;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--bg-team);
+        border-radius: 4px;
+    }
+
+    .advantage-item-icon {
+        width: 64px;
+        height: 64px;
+    }
+
+    .advantage-list {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: var(--gap-photo);
+    }
+
+    .advantage-item {
+        width: 264px;
+    }
+
+    .advantage-item-title {
+        margin-bottom: 8px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        color: var(--color-title);
+    }
+
+    .advantage-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: var(--color-text);
+    }
+
+    .doing {
+        display: block;
+        padding-bottom: 120px;
+    }
+
+    .doing-title {
+        margin-bottom: 72px;
+    }
+
+    .doing-list {
+        display: flex;
+        gap: var(--gap-photo);
+    }
+
+    .doing-item {
+        border: 1px solid var(--color-border);
+    }
+
+    .team>.container,
+    {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.team {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-color: var(--bg-team);
+}
+
+.team-list {
+    gap: 24px;
+}
+
+.team-item {
+    width: calc((100% - 3 * 24px) / 4);
+}
+
+.team-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+}
+
+.costumers-list {
+    gap: 24px;
+}
+
+.footer-items {
+    flex-wrap: nowrap;
+    gap: unset;
+    justify-content: unset;
+}
+
+.footer-left-column {
+    margin-right: 120px;
+}
+
+.footer-logo,
+.social-title,
+.footer-label-subscribe {
+    text-align: start;
+}
+
+.footer-subscribe-wrap {
+    gap: 24px;
+}
+
+.footer-subscribe-input {
+    width: 264px;
+    opacity: 1;
+}
+
+.footer-social {
+    margin-right: 80px;
+}
+}

@@ -111,6 +111,19 @@
         transform: scale(1.2);
     }
 
+    .slider {
+        background-image: var(--bg-title), url(../images/bg-slider-tab@1x.jpg);
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .slider {
+            background-image: var(--bg-title), url(../images/bg-slider-tab@2x.jpg);
+        }
+    }
+
+
     .modal {
         width: 408px;
         padding: 24px;
@@ -229,6 +242,18 @@
     }
 
     .slider {
+        background-image: var(--bg-title), url(../images/bg-slider@1x.jpg);
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .slider {
+            background-image: var(--bg-title), url(../images/bg-slider@2x.jpg);
+        }
+    }
+
+    .slider {
         padding: 188px 0;
         margin-left: auto;
         margin-right: auto;
@@ -287,6 +312,24 @@
     .advantage-text {
         font-weight: 400;
         font-size: 16px;
+    }
+
+    .doing {
+        display: block;
+        padding-bottom: 120px;
+    }
+
+    .doing-title {
+        margin-bottom: 72px;
+    }
+
+    .doing-list {
+        display: flex;
+        gap: var(--gap-photo);
+    }
+
+    .doing-item {
+        border: 1px solid var(--color-border);
     }
 
     .team {

@@ -235,20 +235,22 @@ ul {
 
 /* ----------------SLIDER------------------ */
 .slider {
-  padding: 188px 0;
+  padding: 112px 0;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1440px;
+  width: 100%;
   background-image: var(--bg-title), url(../images/bg-people-office.jpg);
   background-size: cover;
   background-position: center;
 }
 
 .slider-title {
-  max-width: 496px;
+  max-width: 320px;
   margin: 0 auto;
-  font-size: 56px;
-  line-height: 1.07;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: capitalize;
+  line-height: 1.11;
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--color-title-contrast);
@@ -257,10 +259,9 @@ ul {
 .slider-btn {
   display: block;
   min-width: 169px;
-  margin: 47px auto 0;
+  margin: 72px auto 0;
   padding: 16px 32px;
   font-weight: 500;
-  font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   background-color: var(--bg-btn-hero);

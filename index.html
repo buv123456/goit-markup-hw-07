@@ -29,10 +29,10 @@
   </head>
 
   <body>
-    <!-- <header class="header">
-      <div class="container header-container"> -->
-    <!-- Navigation to other pages -->
-    <!-- <nav class="nav">
+    <header class="header">
+      <div class="container header-container">
+        <!-- Navigation to other pages -->
+        <nav class="nav">
           <a class="logo link" href="./index.html"
             >Web<span class="logo-part">Studio</span></a
           >
@@ -47,9 +47,14 @@
               <a class="nav-link link" href="">Contacts</a>
             </li>
           </ul>
-        </nav> -->
-    <!-- Contacts -->
-    <!-- <address class="address">
+        </nav>
+        <button type="button" class="menu-btn btn" data-menu-open>
+          <svg class="menu-icon" width="32" height="22">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <!-- Contacts -->
+        <address class="address">
           <ul class="address-list list">
             <li class="address-list-item">
               <a class="address-item link" href="mailto:info@devstudio.com"
@@ -62,9 +67,78 @@
               >
             </li>
           </ul>
-        </address> -->
-    <!-- </div>
-    </header> -->
+        </address>
+      </div>
+      <div class="mob-menu is-hidden" data-menu>
+        <div>
+          <button class="menu-close btn" type="button" data-menu-close>
+            <svg class="menu-close-svg">
+              <use href="./images/icons.svg#icon-vector"></use>
+            </svg>
+          </button>
+          <ul class="mob-menu-list list">
+            <li class="mob-menu-item">
+              <a class="mob-menu-link link active" href="./index.html"
+                >Studio</a
+              >
+            </li>
+            <li class="mob-menu-item">
+              <a class="mob-menu-link link" href="./portfolio.html"
+                >Portfolio</a
+              >
+            </li>
+            <li class="mob-menu-item">
+              <a class="mob-menu-link link" href="">Contacts</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul class="mob-contacts-list list">
+            <li class="mob-tel">
+              <a class="mob-tel-link link" href="tel:+110001111111">
+                <span>+11 (000) </span>
+                <span>111-11-11</span>
+              </a>
+            </li>
+            <li class="mob-email">
+              <a class="mob-email-link link" href="mailto:info@devstudio.com">
+                info@devstudio.com
+              </a>
+            </li>
+          </ul>
+          <ul class="mob-soc-list list">
+            <li class="mob-soc-item">
+              <a href="" class="mob-soc-link link">
+                <svg class="mob-soc-icon" width="40" height="40">
+                  <use href="./images/icons.svg#icon-sc-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-soc-item">
+              <a href="" class="mob-soc-link link">
+                <svg class="mob-soc-icon" width="40" height="40">
+                  <use href="./images/icons.svg#icon-sc-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-soc-item">
+              <a href="" class="mob-soc-link link">
+                <svg class="mob-soc-icon" width="40" height="40">
+                  <use href="./images/icons.svg#icon-sc-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-soc-item">
+              <a href="" class="mob-soc-link link">
+                <svg class="mob-soc-icon" width="40" height="40">
+                  <use href="./images/icons.svg#icon-sc-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
 
     <main>
       <!-- Slider -->
@@ -571,5 +645,6 @@
       AOS.init();
     </script>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

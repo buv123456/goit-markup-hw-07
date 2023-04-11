@@ -108,6 +108,16 @@ ul {
   overflow: hidden;
 }
 
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
 /* ----------------HEADER------------------ */
 .header {
   padding: 24px 0 22px;
@@ -185,6 +195,7 @@ ul {
   height: 24px;
   margin-left: auto;
   margin-bottom: 32px;
+  position: relative;
   background-color: #E7E9FC;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -699,9 +710,9 @@ ul {
 
 .modal {
   position: absolute;
-  width: 408px;
+  width: 100%;
   min-height: 576px;
-  padding: 24px;
+  padding: 24px 16px;
   top: 50%;
   left: 50%;
   background-color: #FCFCFC;
@@ -712,13 +723,12 @@ ul {
   transition-timing-function: var(--trans-function);
 }
 
-.menu-close,
 .modal-close {
   display: block;
   width: 24px;
   height: 24px;
   position: relative;
-  margin-left: auto;
+  margin: 0 8px 0 auto;
   background-color: #E7E9FC;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -743,12 +753,6 @@ ul {
   transform: translate(-50%, -50%);
 }
 
-.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
 .modal-form {
   display: flex;
   flex-direction: column;
@@ -765,11 +769,10 @@ ul {
 }
 
 .modal-title {
-  font-size: 16px;
   font-weight: 500;
   text-align: center;
   letter-spacing: 0.02rem;
-  line-height: 1.28;
+  line-height: 1.5;
   color: var(--color-title);
   margin-top: 24px;
 }
@@ -836,7 +839,7 @@ ul {
 }
 
 .modal-label-comment {
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .modal-comment {
@@ -868,6 +871,7 @@ ul {
 .modal-accept {
   display: flex;
   align-items: center;
+  gap: 8px;
 }
 
 .modal-accept::before {
@@ -875,15 +879,12 @@ ul {
   display: block;
   width: 16px;
   height: 16px;
-  margin-right: 8px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
   transition: background-color var(--animation-time) var(--trans-function);
 }
 
 .modal-accept-link {
-  display: block;
-  margin-left: 0.25rem;
   color: var(--color-text-btn);
 }
 

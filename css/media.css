@@ -6,6 +6,10 @@
     .mob-soc-list {
         gap: 56px;
     }
+
+    .modal {
+        width: 392px;
+    }
 }
 
 @media screen and (min-width:768px) {
@@ -105,6 +109,15 @@
     .address-item:focus {
         color: var(--color-active);
         transform: scale(1.2);
+    }
+
+    .modal {
+        width: 408px;
+        padding: 24px;
+    }
+
+    .modal-close {
+        margin-right: 0;
     }
 }
 
@@ -332,4 +345,13 @@
     .footer-social {
         margin-right: 80px;
     }
+
+    .modal {
+        width: 408px;
+    }
+
+    .modal-label-comment {
+        margin-bottom: 16px;
+    }
+
 }

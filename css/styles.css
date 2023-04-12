@@ -174,7 +174,6 @@ ul {
   display: none;
 }
 
-
 .mob-menu {
   position: fixed;
   top: 0;
@@ -230,13 +229,10 @@ ul {
 
 .mob-tel-link {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 26px;
   line-height: 1.11;
   letter-spacing: 0.02rem;
   text-transform: capitalize;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.9rem;
   color: var(--bg-btn-hero);
 }
 
@@ -375,7 +371,7 @@ ul {
 .team-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 72px;
+  gap: calc(var(--gap-photo) * 3);
 }
 
 .team-item {
@@ -444,7 +440,7 @@ ul {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 72px 16px;
+  gap: calc(var(--gap-photo) * 3) 16px;
 }
 
 .costumer-link {
@@ -483,7 +479,7 @@ ul {
 .footer-items {
   display: flex;
   flex-wrap: wrap;
-  gap: 72px;
+  gap: calc(var(--gap-photo) * 3);
   justify-content: center;
 }
 
@@ -506,6 +502,7 @@ ul {
 .social-title,
 .footer-label-subscribe {
   margin-bottom: 16px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -610,22 +607,29 @@ ul {
 
 /* ----------------PAGE PORTFOLIO------------------ */
 .portfolio {
-  padding-top: 96px;
-  padding-bottom: 120px;
+  padding: 48px 0;
 }
 
 .portfolio-nav {
-  margin-bottom: 72px;
+  margin-bottom: 48px;
   display: flex;
-  justify-content: center;
-  gap: var(--gap-photo);
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 16px 0;
+
+}
+
+.portfolio-nav-item {
+  margin-right: 24px;
+
 }
 
 .portfolio-nav-btn {
-  padding: 12px 24px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
+  height: 40px;
+  padding: 8px 16px;
   color: var(--color-text-btn);
   background-color: var(--bg-btn-pf);
   border: 1px solid var(--color-border);
@@ -633,6 +637,10 @@ ul {
   transition-property: color, background-color, border, box-shadow, transform;
   transition-duration: var(--animation-time);
   transition-timing-function: var(--trans-function);
+}
+
+.portfolio-nav-btn:nth-child(3) {
+  margin-right: auto;
 }
 
 .portfolio-nav-btn:is(:hover, :focus) {
@@ -652,7 +660,7 @@ ul {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  gap: calc(var(--gap-photo) * 2) var(--gap-photo);
+  gap: 48px 0;
 }
 
 .portfolio-wrap {
@@ -661,7 +669,9 @@ ul {
 }
 
 .portfolio-item {
-  width: calc((100% - 2 * var(--gap-photo)) / 3);
+  width: 100%;
+  border: 1px solid #F4F4FD;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-item:hover .portfolio-text-appear {
@@ -677,7 +687,7 @@ ul {
   background-color: var(--bg-btn-hero);
   color: var(--color-logo-ft);
   height: 100%;
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform var(--animation-time) var(--trans-function);
 }
 
@@ -690,9 +700,8 @@ ul {
 
 .portfolio-description {
   padding: 32px 16px;
-  border: 1px solid var(--color-border);
-  border-top: none;
 }
+
 
 .portfolio-item-text {
   margin-top: 8px;

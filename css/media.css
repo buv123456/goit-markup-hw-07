@@ -3,6 +3,10 @@
         width: 426px;
     }
 
+    .mob-tel-link {
+        font-size: 36px;
+    }
+
     .mob-soc-list {
         gap: 56px;
     }
@@ -12,6 +16,7 @@
     }
 }
 
+/* -----------------------------TAB----------------------------- */
 @media screen and (min-width:768px) {
     .header {
         padding: 16px 0;
@@ -87,21 +92,11 @@
     .address {
         display: block;
         font-style: normal;
-    }
-
-    .address-list {
-        display: flex;
         margin-left: auto;
     }
 
-    .address-list-item>.link {
-        line-height: 14px;
-        letter-spacing: 0.04em;
-        color: var(--color-text);
-    }
-
     .address-item {
-        display: block;
+        color: var(--color-text);
         transition: transform var(--animation-time) var(--trans-function);
     }
 
@@ -123,6 +118,11 @@
         }
     }
 
+    .footer-logo,
+    .social-title,
+    .footer-label-subscribe {
+        text-align: start;
+    }
 
     .modal {
         width: 408px;
@@ -132,8 +132,40 @@
     .modal-close {
         margin-right: 0;
     }
+
+    .portfolio {
+        padding: 64px 0 96px;
+    }
+
+    .portfolio-nav {
+        margin-bottom: 64px;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: var(--gap-photo);
+    }
+
+    .portfolio-nav-item {
+        margin-right: unset;
+    }
+
+    .portfolio-nav-btn {
+        padding: 12px 24px;
+        height: 48px;
+    }
+
+    .portfolio-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: calc(var(--gap-photo) * 3) var(--gap-photo);
+    }
+
+    .portfolio-item {
+        width: calc((100% - var(--gap-photo)) / 2);
+    }
 }
 
+/* -----------------------------TAB limited----------------------------- */
 @media screen and (min-width:768px) and (max-width:1157px) {
     .container {
         width: 766px;
@@ -145,17 +177,16 @@
         padding-right: 107px;
     }
 
-    .address {
-        margin-left: 124px;
-    }
-
-    .address-list {
-        flex-wrap: wrap;
-        gap: 12px;
-    }
 
     .address-item {
         font-size: 12px;
+        line-height: 1.166666;
+        letter-spacing: 0.04rem;
+        display: block;
+    }
+
+    .address-list-item:first-child {
+        margin-bottom: 12px;
     }
 
     .slider-title {
@@ -172,23 +203,19 @@
     .advantage-list {
         display: flex;
         flex-wrap: wrap;
-        gap: 72px 24px;
+        gap: calc(var(--gap-photo) * 3) var(--gap-photo);
     }
 
     .advantage-item {
-        width: calc((100% - 24px) / 2);
+        width: calc((100% - var(--gap-photo)) / 2);
     }
 
     .advantage-item-title {
         text-align: start;
     }
 
-    .advantage-item:not(:last-child) {
-        margin-bottom: 0;
-    }
-
     .team-list {
-        gap: 64px 24px;
+        gap: 64px var(--gap-photo);
     }
 
     .team-item {
@@ -196,7 +223,7 @@
     }
 
     .costumers-list {
-        gap: 62px 24px;
+        gap: 62px var(--gap-photo);
     }
 
     .footer>.container {
@@ -204,30 +231,22 @@
         padding-left: 107px;
     }
 
-    .footer-logo {
-        text-align: start;
-    }
-
     .footer-items {
-        gap: 72px 24px;
+        gap: calc(var(--gap-photo) * 3) var(--gap-photo);
         justify-content: unset;
-    }
-
-    .footer-label-subscribe {
-        text-align: start;
     }
 
     .footer-subscribe-wrap {
         flex-wrap: nowrap;
-        gap: 24px;
+        gap: var(--gap-photo);
     }
 
     .footer-subscribe-input {
         width: 264px;
-
     }
 }
 
+/* -----------------------------DESKTOP----------------------------- */
 @media screen and (min-width:1158px) {
     .container {
         width: 1158px;
@@ -238,7 +257,15 @@
     }
 
     .address-list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
         gap: 40px;
+    }
+
+    .address-item {
+        line-height: 1.5;
+        letter-spacing: 0.02em;
     }
 
     .slider {
@@ -302,6 +329,10 @@
         width: 264px;
     }
 
+    .advantage-item:not(:last-child) {
+        margin-bottom: 0;
+    }
+
     .advantage-item-title {
         font-weight: 500;
         font-size: 20px;
@@ -339,11 +370,11 @@
     }
 
     .team-list {
-        gap: 24px;
+        gap: var(--gap-photo);
     }
 
     .team-item {
-        width: calc((100% - 3 * 24px) / 4);
+        width: calc((100% - 3 * var(--gap-photo)) / 4);
     }
 
     .team-title {
@@ -353,7 +384,7 @@
     }
 
     .costumers-list {
-        gap: 24px;
+        gap: var(--gap-photo);
     }
 
     .footer-items {
@@ -370,14 +401,8 @@
         display: inline-block;
     }
 
-    .footer-logo,
-    .social-title,
-    .footer-label-subscribe {
-        text-align: start;
-    }
-
     .footer-subscribe-wrap {
-        gap: 24px;
+        gap: var(--gap-photo);
     }
 
     .footer-subscribe-input {
@@ -395,6 +420,27 @@
 
     .modal-label-comment {
         margin-bottom: 16px;
+    }
+
+    .portfolio {
+        padding: 100px 0 120px;
+    }
+
+    .portfolio-nav {
+        margin-bottom: 72px;
+    }
+
+    .portfolio-list {
+        gap: calc(var(--gap-photo) * 2) var(--gap-photo);
+    }
+
+    .portfolio-item {
+        width: calc((100% - 2 * var(--gap-photo)) / 3);
+    }
+
+    .portfolio-description {
+        border: 1px solid var(--color-border);
+        border-top: none;
     }
 
 }
